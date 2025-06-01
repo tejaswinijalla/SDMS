@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student.css">
+
+</head>
+<body>
+    <header>
+        <nav id="sidebar" class="head">
+            
+            <p>student panel</p>
+            
+            <ul>
+                <li><a href="#" data-target="home">Home</a></li>
+                <li><a href="#" data-target="update-profile">Update Profile</a></li>
+                <li><a href="#" data-target="Backlogs">Backlogs</a></li>
+                <li><a href="#" data-target="time-table">Time Table</a></li>
+
+                <li><a href="#" data-target="View-Attendance">View Attendance</a></li>
+                <li><a href="#" data-target="marks">Marks</a></li>
+                <li><a href="#" data-target="Circulars">Circulars</a></li>
+                <li><a href="#" data-target="new-learing">New Learing</a></li>
+
+                <li><a href="#" data-target="student-forms">Student Forms</a></li>
+                <li><a href="#" data-target="Bus-tracking">Bus Tracking</a></li>
+
+                
+
+                <li><a href="#" data-target="feedback">FeedBack</a></li>
+
+
+                <li><a href="index.html" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+    <main>
+        <section id="home" class="content">
+            
+            <h1>Student Dashboard</h1>
+            <div class="stats-boxes">
+                <div class="stats-box">
+                    <h2>Total No.Of Days</h2>
+                    <p id="Total No.Of Days">15</p>
+                </div>
+                <div class="stats-box1">
+                    <h2>Attendance Percentage
+                    </h2>
+                    <p id="Attendance Percentage">75%</p>
+                </div>
+                <div class="stats-box2" >
+                    <h2>CGPA</h2>
+                    <p id="CGPA">8.17</p>
+                </div>
+                <div class="stats-box3">
+                    <h2>Fee Due</h2>
+                    <p id="Fee Due">35000/-</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </section>
+            </section>
+            <section id="update-profile" class="content">
+                <h2>Update Profile</h2>
+                <div class="profile-image">
+                    <img src="./img.jpg" alt="Profile Image">
+                    <button>Change Picture</button>
+                </div>
+                <div class="profile-content">
+                    <form>
+                        <label for="admin-name">Name:</label>
+                        <input type="text" id="admin-name" name="admin-name" required>
+    
+                        <label for="admin-email">Email:</label>
+                        <input type="email" id="admin-email" name="admin-email" required>
+    
+                        <label for="admin-password">Password:</label>
+                        <input type="password" id="admin-password" name="admin-password" required>
+    
+                        <label for="mobile-number">Mobile No:</label>
+                        <input type="number" id="mobile-number" name="mobile-number" required>
+    
+                        <label for="address">Address:</Address>:</label>
+                        <input type="text" id="address" name="address" required>
+    
+                        <button type="submit">Update Profile</button>
+                    </form>
+                    
+                </div>
+            </section>
+            <section id="Backlogs" class="content">
+                <h2>Backlogs</h2>
+                <p>Student have no Backlogs...</p>
+            </section>
+    
+            <section id="time-table" class="content">
+                <h2>Time Table</h2>
+               <p>Semester time table will be present here</p>
+               <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>DAA</td>
+                        <td>IP</td>
+                        <td>CRT</td>
+                        <td>CRT</td>
+                        <td>CN</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Biology</td>
+                        <td>Math</td>
+                        <td>English</td>
+                        <td>Physics</td>
+                        <td>PE</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td>History</td>
+                        <td>Biology</td>
+                        <td>Math</td>
+                        <td>English</td>
+                        <td>Physics</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 01:00</td>
+                        <td>Lunch</td>
+                        <td>Lunch</td>
+                        <td>Lunch</td>
+                        <td>Lunch</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td>01:00 - 02:00</td>
+                        <td>Chemistry</td>
+                        <td>History</td>
+                        <td>Biology</td>
+                        <td>Math</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 - 03:00</td>
+                        <td>Physics</td>
+                        <td>Chemistry</td>
+                        <td>History</td>
+                        <td>Biology</td>
+                        <td>Math</td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+    
+            <section id="View-Attendance" class="content">
+                <h2>View-Attendance</h2>
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-09-01</td>
+                            <td>DAA</td>
+                            <td>Present</td>
+                            <td>IP</td>
+                            <td>Present</td>
+                            <td>CRT</td>
+                            <td>Present</td>
+                            <td>CRT</td>
+                            <td>Present</td>
+                            <td>CN</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>2024-09-02</td>
+                            <td>CN</td>
+                            <td>Absent</td>
+                            <td>DAA</td>
+                            <td>Present</td>
+                            <td>Project</td>
+                            <td>Absent</td>
+                            <td>Project</td>
+                            <td>Absent</td>
+                            <td>LIBRARY</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>2024-09-03</td>
+                            <td>COI</td>
+                            <td>Absent</td>
+                            <td>DAA</td>
+                            <td>Present</td>
+                            <td>SDC</td>
+                            <td>Absent</td>
+                            <td>SDC</td>
+                            <td>Absent</td>
+                            <td>CN</td>
+                            <td>Absent</td>
+                        </tr>
+                        <tr>
+                            <td>2024-09-04</td>
+                            <td>CN</td>
+                            <td>Present</td>
+                            <td>IP-LAB</td>
+                            <td>Present</td>
+                            <td>IP-LAB</td>
+                            <td>Present</td>
+                            <td>COI</td>
+                            <td>Present</td>
+                            <td>DAA</td>
+                            <td>Present</td>
+                        </tr>
+                        <tr>
+                            <td>2024-09-05</td>
+                            <td>IP</td>
+                            <td>Absent</td>
+                            <td>CN-LAB</td>
+                            <td>Present</td>
+                            <td>CN-LAB</td>
+                            <td>Absent</td>
+                            <td>COI</td>
+                            <td>Absent</td>
+                            <td>DAA</td>
+                            <td>Absent</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="attendance-summary">
+                    <h3>Overall Attendance Percentage</h3>
+                    <p id="attendance-percentage">75%</p>
+                </div>
+            </section>
+    
+            <section id="marks" class="content">
+                <h2>Marks</h2>
+                <table class="marks-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Midterm</th>
+                            <th>Final</th>
+                            <th>Total</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IP</td>
+                            <td>25</td>
+                            <td>60</td>
+                            <td>75</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>IP-LAB</td>
+                            <td>29</td>
+                            <td>69</td>
+                            <td>98</td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <td>CN</td>
+                            <td>26</td>
+                            <td>55</td>
+                            <td>81</td>
+                            <td>A+</td>
+                        </tr>
+                        <tr>
+                            <td>CN-LAB</td>
+                            <td>29</td>
+                            <td>68</td>
+                            <td>97</td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <td>DAA</td>
+                            <td>25</td>
+                            <td>59</td>
+                            <td>84</td>
+                            <td>A+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <section id="Circulars" class="content">
+                <h2>Circulars</h2>
+                <div class="circulars-list">
+                    <div class="circular">
+                        <h3>Important Notice: Semester Exams</h3>
+                        <p>Date: 2024-09-20</p>
+                        <p>The semester exams will commence from September 25, 2024. Please check the timetable for your subjects.</p>
+                    </div>
+                    <div class="circular">
+                        <h3>Guest Lecture on Artificial Intelligence</h3>
+                        <p>Date: 2024-09-15</p>
+                        <p>A guest lecture on Artificial Intelligence will be held on September 22, 2024, at 10 AM in the main auditorium.</p>
+                    </div>
+                    <div class="circular">
+                        <h3>College Sports Day</h3>
+                        <p>Date: 2024-09-10</p>
+                        <p>The college sports day is scheduled for October 1, 2024. All students are encouraged to participate.</p>
+                    </div>
+                    <div class="circular">
+                        <h3>Workshop on Web Development</h3>
+                        <p>Date: 2024-09-05</p>
+                        <p>Join us for a workshop on Web Development on September 30, 2024. Limited seats available!</p>
+                    </div>
+            </section>
+    
+            <section id="new-learing" class="content">
+                <h2>New-learning</h2>
+          
+                    
+                <div class="course-section">
+                    <h2>Courses</h2>
+                    <div class="card-container">
+                        <div class="card">
+                            <h3>python course</h3>
+                            <p>A Brief Introduction to the Python Programming Language.</p>
+                            <a href="https://www.guvi.in/courses-video/?course=pythontelugu" class="https://www.guvi.in/courses-video/?course=pythontelugu">Watch Video</a>
+                        </div>
+                        <div class="card">
+                            <h3>Course Title 2</h3>
+                            <p>Description of Course 2.</p>
+                            <a href="#" class="video-link">Watch Video</a>
+                        </div>
+                        <div class="card">
+                            <h3>Course Title 3</h3>
+                            <p>Description of Course 3.</p>
+                            <a href="#" class="video-link">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+            
+                
+            </section>
+            
+            <section id="student-forms" class="content">
+                <h2>Student Forms</h2>
+                <div class="form-container">
+                    <h2>Activity Registration Forms</h2>
+                    <ul class="form-list">
+                        <li>
+                            <h3>Sports Registration</h3>
+                            <div class="form">
+                                <label for="sports-name">Name:</label>
+                                <input type="text" id="sports-name" required>
+                                <label for="sports-sport">Sport:</label>
+                                <select id="sports-sport" required>
+                                    <option value="football">Football</option>
+                                    <option value="basketball">Basketball</option>
+                                    <option value="tennis">Tennis</option>
+                                </select>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Club Membership</h3>
+                            <div class="form">
+                                <label for="club-name">Club Name:</label>
+                                <input type="text" id="club-name" required>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Volunteer Registration</h3>
+                            <div class="form">
+                                <label for="volunteer-name">Name:</label>
+                                <input type="text" id="volunteer-name" required>
+                                <label for="volunteer-activity">Preferred Activity:</label>
+                                <select id="volunteer-activity" required>
+                                    <option value="cleanup">Cleanup Drive</option>
+                                    <option value="teaching">Teaching Assistance</option>
+                                </select>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+        <section id="Bus-tracking" class="content" >
+        <h2>Enter Bus Details</h2>
+        <form id="bus-form"  >
+            <label for="bus-number">Bus Number:</label>
+            <input type="text" id="bus-number" required>
+            <br>
+            <label for="pass-number">Bus Pass Number:</label>
+            <input type="text" id="pass-number" required>
+            <br>
+            <button type="submit">Track My Bus</button>
+        </form>
+    </section>
+        <section id="Bus-tracking" class="content">
+            <h2>Track Your Bus</h2>
+            <div id="map"></div>
+        </section>
+
+        <section id="feedback" class="content">
+            <h1>Subject Feedback Form</h1>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="roll-no">Roll Number:</label>
+                    <input type="text" id="roll-no" name="roll-no" required>
+                    <label for="name">Student Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="subject-feedback">
+                    <label for="maths">DAA:</label>
+                    <input type="number" id="maths" name="maths" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback">
+                    <label for="science">CN:</label>
+                    <input type="number" id="science" name="science" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback">
+                    <label for="english">IP:</label>
+                    <input type="number" id="english" name="english" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback">
+                    <label for="history">IP-LAB:</label>
+                    <input type="number" id="history" name="history" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback">
+                    <label for="geography">CN-LAB:</label>
+                    <input type="number" id="geography" name="geography" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback">
+                    <label for="art">SDC:</label>
+                    <input type="number" id="art" name="art" min="0" max="5" required>
+                </div>
+                <div class="subject-feedback"></div>
+                    <label for="art">CRT:</label>
+                    <input type="number" id="art" name="art" min="0" max="5" required>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section id="manage-staff" class="content">
+            <h2>Manage Staff</h2>
+            <button>View Staff List</button>
+            <button>Update Staff Information</button>
+        </section>
+                
+        </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#sidebar ul li {
+    margin: 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 13px 18px;
+    transition: background-color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+    height: 200px;
+}
+.head p {
+    color: white;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0%;
+    text-transform: capitalize;
+}
+.content {
+    display: none;
+    height: 100px;
+    width: 1200px;
+}
+
+.content.active {
+    display: block;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.profile-content form {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.profile-image {
+    text-align: center;
+    margin:-8.5% 0% 0% 80%;;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 180px;
+    border-radius: 60%;
+    object-fit: cover;
+}
+.profile-image button {
+    margin: 2% 4.5% 0% 0% ;
+}
+main {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.content {
+    display: none;
+
+}
+
+.content.active {
+    display: block;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+.stats-box1 {
+    background: #639d76;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    text-align: center;
+    margin-top: 6%;
+}
+.stats-box{
+background: #84b7bc;
+padding: 50px;
+border-radius: 8px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+width: 15%;
+text-align: center;
+margin-top: 6%;
+}
+.stats-box2 {
+    background: #ca8f80;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    text-align: center;
+    margin-top: 6%;
+}
+.stats-box3 {
+    background: #9177a0;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    text-align: center;
+    margin-top: 6%;
+}
+.stats-box h2 {
+    margin: 0;
+}
+
+.stats-box p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10x 0 0;
+    background-color: #f1f4f7;
+
+}
+.stats-box1 p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    background-color: #e4e7ea;
+
+}
+.stats-box2 p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    background-color: #e4e7ea;
+
+}
+.stats-box3 p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    background-color: #e3e7eb;
+
+}
+.chart-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 2% auto;
+}
+    
+
+
+
+

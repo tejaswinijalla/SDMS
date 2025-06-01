@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System - Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-section">
+            <h2>Staff/Admin Login</h2>
+            <form id="admin-login-form">
+                <label for="rollno">ID NO:</label>
+                <input type="text" id="admin-username" name="admin-username" required placeholder="Enter your ID NO">
+
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin-password" required placeholder="Enter your password">
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="login-section">
+            <h2>Student Login</h2>
+            <form id="student-login-form">
+                <label for="rollno">ID NO::</label>
+                <input type="text" id="student-username" name="student-username" required placeholder="Enter your ID NO">
+
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" name="student-password" required placeholder="Enter your password">
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

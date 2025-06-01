@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - College Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="sidebar" class="head">
+            
+            <p>admin panel</p>
+            
+            <ul>
+                <li><a href="#" data-target="home">Home</a></li>
+                <li><a href="#" data-target="update-profile">Update Profile</a></li>
+                <li><a href="#" data-target="course">Course</a></li>
+                
+                <li><a href="#" data-target="subject">Subject</a></li>
+                <li><a href="#" data-target="add-staff">Add Staff</a></li>
+                <li><a href="#" data-target="manage-staff">Manage Staff</a></li>
+                <li><a href="#" data-target="add-student">Add Student</a></li>
+                <li><a href="#" data-target="manage-student">Manage Student</a></li>
+                <li><a href="#" data-target="leave approvals">Leave Approvals</a></li>
+
+                <li><a href="index.html" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content">
+            
+                <h1>Admin Dashboard</h1>
+                <div class="stats-boxes">
+                    <div class="stats-box">
+                        <h2>Total Students</h2>
+                        <p id="total-students">800</p>
+                    </div>
+                    <div class="stats-box1">
+                        <h2>Total Staff</h2>
+                        <p id="total-staff">45</p>
+                    </div>
+                    <div class="stats-box2" >
+                        <h2>Total Courses</h2>
+                        <p id="total-courses">10</p>
+                    </div>
+                    <div class="stats-box3">
+                        <h2>Total Subjects</h2>
+                        <p id="total-subjects">35</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pie-chart"></canvas>
+                </div>
+            </section>
+
+        <section id="update-profile" class="content">
+            <h2>Update Profile</h2>
+            <div class="profile-image">
+                <img src="./img.jpg" alt="Profile Image">
+                <button>Change Picture</button>
+            </div>
+            <div class="profile-content">
+                <form>
+                    <label for="admin-name">Name:</label>
+                    <input type="text" id="admin-name" name="admin-name" required>
+
+                    <label for="admin-email">Email:</label>
+                    <input type="email" id="admin-email" name="admin-email" required>
+
+                    <label for="admin-password">Password:</label>
+                    <input type="password" id="admin-password" name="admin-password" required>
+
+                    <label for="mobile-number">Mobile No:</label>
+                    <input type="number" id="mobile-number" name="mobile-number" required>
+
+                    <label for="address">Address:</Address>:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+               
+            </div>
+        </section>
+
+        <section id="course" class="content">
+            <h2>Course Management</h2>
+            <button>Add New Course</button>
+            
+            <button>Manage Existing Courses</button>
+        </section>
+
+        <section id="subject" class="content">
+            <h2>Subject Management</h2>
+            <button>Add New Subject</button>
+            <button>Manage Existing Subjects</button>
+        </section>
+
+        <section id="add-staff" class="content">
+            <h2>Add Staff</h2>
+            <form>
+                <label for="staff-name">Name:</label>
+                <input type="text" id="staff-name" name="staff-name" required>
+
+                <label for="staff-email">Email:</label>
+                <input type="email" id="staff-email" name="staff-email" required>
+
+                <label for="staff-password">Password:</label>
+                <input type="password" id="staff-password" name="staff-password" required>
+
+                <button type="submit">Add Staff</button>
+            </form>
+        </section>
+
+        <section id="manage-staff" class="content">
+            <h2>Manage Staff</h2>
+            <button>View Staff List</button>
+            <button>Update Staff Information</button>
+        </section>
+
+        <section id="add-student" class="content">
+            <h2>Add Student</h2>
+            <form>
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student-name" required>
+
+                <label for="student-email">Email:</label>
+                <input type="email" id="student-email" name="student-email" required>
+
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" name="student-password" required>
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section id="manage-student" class="content">
+            <h2>Manage Students</h2>
+            <button>View Student List</button>
+            <button>Update Student Information</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

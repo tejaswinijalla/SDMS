@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - College Management System</title>
+    <link rel="stylesheet" href="staff.css">
+ 
+</head>
+<body>
+    <header>
+        <nav id="sidebar" class="head">
+            
+            <p>Staff panel</p>
+            
+            <ul>
+                <li><a href="#" data-target="home">Home</a></li>
+                <li><a href="#" data-target="update-profile">Update Profile</a></li>
+                <li><a href="#" data-target="add-result">Add Result</a></li>
+                <li><a href="#" data-target="edit-result">Edit Result</a></li>
+
+                <li><a href="#" data-target="take-attendance">Take Attendance</a></li>
+                <li><a href="#" data-target="View-Attendance">View Attendance</a></li>
+                <li><a href="#" data-target="apply-leave">Apply leave</a></li>
+                <li><a href="#" data-target="Bus-tracking">Bus tracking</a></li>
+
+
+                <li><a href="index.html" id="logout">Logout</a></li>
+
+                
+
+             
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content">
+            
+                <h1>Staff Dashboard</h1>
+                <div class="stats-boxes">
+                    <div class="stats-box">
+                        <h2>Total Students</h2>
+                        <p id="total-students">800</p>
+                    </div>
+                    <div class="stats-box1">
+                        <h2>Total Attendance Taken</h2>
+                        <p id="Total Attendance Taken">45</p>
+                    </div>
+                    <div class="stats-box2" >
+                        <h2>Total leave applied</h2>
+                        <p id="Total leave applied">10</p>
+                    </div>
+                    <div class="stats-box3">
+                        <h2>Total Subjects</h2>
+                        <p id="total-subjects">35</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pie-chart"></canvas>
+                </div>
+            </section>
+
+        <section id="update-profile" class="content">
+            <h2>Update Profile</h2>
+            <div class="profile-image">
+                <img src="./img.jpg" alt="Profile Image">
+                <button>Change Picture</button>
+            </div>
+            <div class="profile-content">
+                <form>
+                    <label for="admin-name">Name:</label>
+                    <input type="text" id="admin-name" name="admin-name" required>
+
+                    <label for="admin-email">Email:</label>
+                    <input type="email" id="admin-email" name="admin-email" required>
+
+                    <label for="admin-password">Password:</label>
+                    <input type="password" id="admin-password" name="admin-password" required>
+
+                    <label for="mobile-number">Mobile No:</label>
+                    <input type="number" id="mobile-number" name="mobile-number" required>
+
+                    <label for="address">Address:</Address>:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+               
+            </div>
+        </section>
+
+        <section id="add-result" class="content">
+            <h2>Result Management</h2>
+            <form id="add-result-form">
+                <label for="student-year">Select Student Year:</label>
+        <select id="student-year" name="student" required>
+            <option value="">--Select Student--</option>
+            <option value="1st-year">1st Year</option>
+            <option value="2nd-year">2nd Year</option>
+            <option value="3rd-year">3rd Year</option>
+            <option value="4th-year">4th Year</option>
+
+            <!-- Add more students as needed -->
+        </select>
+
+        <label for="student-section">Select Student Year:</label>
+        <select id="student-year" name="student" required>
+            <option value="">--Select Student--</option>
+            <option value="1st-year">1st Year</option>
+            <option value="2nd-year">2nd Year</option>
+            <option value="3rd-year">3rd Year</option>
+            <option value="4th-year">4th Year</option>
+
+            <!-- Add more students as needed -->
+        </select>
+
+        <label for="student-select">Select Student:</label>
+        <select id="student-select" name="student" required>
+            <option value="">--Select Student--</option>
+            <option value="student1">Student 1</option>
+            <option value="student2">Student 2</option>
+            <option value="student3">Student 3</option>
+            <!-- Add more students as needed -->
+        </select>
+
+        <label for="course-select">Select Course:</label>
+        <select id="course-select" name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3</option>
+            <!-- Add more courses as needed -->
+        </select>
+
+        <label for="subject-select">Select Subject:</label>
+        <select id="subject-select" name="subject" required>
+            <option value="">--Select Subject--</option>
+            <option value="subject1">Subject 1</option>
+            <option value="subject2">Subject 2</option>
+            <option value="subject3">Subject 3</option>
+            <!-- Add more subjects as needed -->
+        </select>
+
+        <label for="marks">Marks Obtained:</label>
+        <input type="number" id="marks" name="marks" required min="0" max="100" placeholder="Enter Marks">
+
+        <label for="remarks">Remarks:</label>
+        <textarea id="remarks" name="remarks" rows="4" placeholder="Enter any remarks"></textarea>
+
+        <button type="submit">Add Result</button>
+    </form>
+</section>
+
+        <section id="edit-result" class="content">
+                       <h2>Result Management</h2>
+        
+                       <form id="edit-result-form">
+                        <label for="student-select">Select Student:</label>
+                        <select id="student-select" name="student" required>
+                            <option value="">--Select Student--</option>
+                            <option value="student1">Student 1</option>
+                            <option value="student2">Student 2</option>
+                            <option value="student3">Student 3</option>
+                            <!-- Add more students as needed -->
+                        </select>
+                
+                        <label for="course-select">Select Course:</label>
+                        <select id="course-select" name="course" required>
+                            <option value="">--Select Course--</option>
+                            <option value="course1">Course 1</option>
+                            <option value="course2">Course 2</option>
+                            <option value="course3">Course 3</option>
+                            <!-- Add more courses as needed -->
+                        </select>
+                
+                        <label for="subject-select">Select Subject:</label>
+                        <select id="subject-select" name="subject" required>
+                            <option value="">--Select Subject--</option>
+                            <option value="subject1">Subject 1</option>
+                            <option value="subject2">Subject 2</option>
+                            <option value="subject3">Subject 3</option>
+                            <!-- Add more subjects as needed -->
+                        </select>
+                
+                        <label for="current-marks">Current Marks:</label>
+                        <input type="number" id="current-marks" name="current-marks" min="0" max="100" readonly>
+                
+                        <label for="new-marks">New Marks:</label>
+                        <input type="number" id="new-marks" name="new-marks" min="0" max="100" placeholder="Enter new marks" required>
+                
+                        <button type="submit">Update Result</button>
+                    </form>
+                </section>
+           
+        </section>
+
+
+        <section id="take-attendance" class="content">
+            <h2>Attendance </h2>
+            <form id="attendance-form">
+                <label for="course-select">Select Course:</label>
+                <select id="course-select" name="course" required>
+                    <option value="">--Select Course--</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                    <!-- Add more courses as needed -->
+                </section>
+        
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+        
+                <h3>Select Students:</h3>
+                <div id="student-list">
+                    <div>
+                        <input type="checkbox" id="student1" name="students" value="student1">
+                        <label for="student1">Student 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="student2" name="students" value="student2">
+                        <label for="student2">Student 2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="student3" name="students" value="student3">
+                        <label for="student3">Student 3</label>
+                    </div>
+                    <!-- Add more students as needed -->
+                </div>
+        
+                <button type="submit">Submit Attendance</button>
+            </form>
+        </section>
+         
+        <section id="View-Attendance" class="content">
+         
+          
+
+            <h2>View/Update Attendance</h2>
+    <form id="attendance-search">
+        <label for="course-select">Select Course:</label>
+        <select id="course-select" name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3</option>
+            <!-- Add more courses as needed -->
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Search Attendance</button>
+    </form>
+
+    <div id="attendance-results" style="margin-top: 20px;">
+        <h3>Attendance Records</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Student 1</td>
+                    <td>
+                        <select>
+                            <option value="present">Present</option>
+                            <option value="absent">Absent</option>
+                            <option value="late">Late</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="update-btn">Update</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Student 2</td>
+                    <td>
+                        <select>
+                            <option value="present">Present</option>
+                            <option value="absent">Absent</option>
+                            <option value="late">Late</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="update-btn">Update</button>
+                    </td>
+                </tr>
+                <!-- Add more student records as needed -->
+            </tbody>
+        </table>
+    </div>
+</section>
+        
+        <section id="apply-leave" class="content">
+            <h2> Apply leave</h2>
+            <form id="leave-application-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter Name">
+        
+                <label for="role-select">Role:</label>
+                <select id="role-select" name="role" required>
+                    <option value="">--Select Role--</option>
+                    <option value="staff">Staff</option>
+                    <option value="student">Student</option>
+                </select>
+        
+                <label for="leave-type-select">Leave Type:</label>
+                <select id="leave-type-select" name="leave-type" required>
+                    <option value="">--Select Leave Type--</option>
+                    <option value="sick">Sick Leave</option>
+                    <option value="vacation">Vacation Leave</option>
+                    <option value="personal">Personal Leave</option>
+                </select>
+        
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+        
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+        
+                <label for="reason">Reason for Leave:</label>
+                <textarea id="reason" name="reason" rows="4" required placeholder="Enter reason for leave"></textarea>
+        
+                <button type="submit">Submit Leave Application</button>
+            </form>
+        </section>
+
+        <section id="Bus-tracking" class="content" >
+            <h2>Enter Bus Details</h2>
+        <form id="bus-form"  >
+            <label for="bus-number">Bus Number:</label>
+            <input type="text" id="bus-number" required>
+            <br>
+            <label for="pass-number">Bus Pass Number:</label>
+            <input type="text" id="pass-number" required>
+            <br>
+            <button type="submit">Track My Bus</button>
+        </form>
+    </section>
+        <section id="Bus-tracking" class="content">
+            <h2>Track Your Bus</h2>
+            <div id="map"></div>
+        
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
